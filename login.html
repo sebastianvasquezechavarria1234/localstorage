@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/global.css">
+</head>
+<body class="flex justify-center items-center min-h-[100vh]">
+
+    <form
+        class="max-w-[500px] mx-auto bg-gray-100 p-[24px] rounded-[20px] shadow-md" 
+        action="">
+        <h1 class="text-[1.5rem] uppercase font-bold text-center mb-[30px]">
+            Inicia sesión para comenzar
+        </h1>
+        <!-- CAMPO EMAIL -->
+        <label class="mb-[20px] block">
+            <h4 class="mb-[5px]">Correo electrónico</h4>
+            <input 
+                id="emailUser"
+                class="w-full p-[13px] shadow-md rounded-[8px]"
+                type="email"
+                placeholder="Ejem: Sebasvasquez@gmail.com"
+                required
+                minlength="3"
+                maxlength="20">
+        </label> 
+        <!-- CAMPO CONTRASEÑA -->
+        <label class="mb-[20px] block">
+            <h4 class="mb-[5px]">Contraseña</h4>
+            <input 
+                id="passwordUser"
+                class="w-full p-[13px] shadow-md rounded-[8px]"
+                type="password"
+                placeholder="***"
+                required
+                minlength="3"
+                maxlength="20">
+        </label> 
+
+        <!-- YA TENGO CUENTA -->
+        <a 
+            class="underline text-blue-700 mb-[20px] block"
+            href="./index.html">
+            No tengo una cuenta
+        </a>
+        <!-- SUBMIT -->
+        <input 
+
+            onclick="loginUser()"
+            class="bg-blue-700 text-white p-[13px] rounded-[8px] w-full cursor-pointer"
+            type="button"
+            value="Inicia sesión">
+    </form>
+    
+
+    <script src="./js/login.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>

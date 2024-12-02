@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="./css/global.css">
+</head>
+<body class="flex justify-center items-center min-h-[100vh]">
+
+    <form
+        class="max-w-[500px] mx-auto bg-gray-100 p-[24px] rounded-[20px] shadow-md" 
+        action="">
+        <h1 class="text-[1.5rem] uppercase font-bold text-center mb-[30px]">
+            Regístrate para comenzar
+        </h1>
+        <!-- FORM FLEX -->
+        <div class="flex gap-[10px]">
+            <!-- CAMPO NOMBRE -->
+            <label class="mb-[20px]">
+                <h4 class="mb-[5px]">Nombre</h4>
+                <input 
+                    id="nombreUser"
+                    class="w-full p-[13px] shadow-md rounded-[8px]"
+                    type="text"
+                    placeholder="Ejem: Sebastian"
+                    required
+                    minlength="3"
+                    maxlength="20">
+            </label> 
+            <!-- CAMPO APELLIDO -->
+            <label class="mb-[20px]">
+                <h4 class="mb-[5px]">Apellido</h4>
+                <input 
+                    id="apellidoUser"
+                    class="w-full p-[13px] shadow-md rounded-[8px]"
+                    type="text"
+                    placeholder="Ejem: Vasquez"
+                    required
+                    minlength="3"
+                    maxlength="20">
+            </label> 
+        </div>
+        <!-- CAMPO EMAIL -->
+        <label class="mb-[20px] block">
+            <h4 class="mb-[5px]">Correo electrónico</h4>
+            <input 
+                id="emailUser"
+                class="w-full p-[13px] shadow-md rounded-[8px]"
+                type="email"
+                placeholder="Ejem: Sebasvasquez@gmail.com"
+                required
+                minlength="3"
+                maxlength="20">
+        </label> 
+        <!-- FORM FLEX -->
+        <div class="flex gap-[10px]">
+            <!-- CAMPO CONTRASEÑA -->
+            <label class="mb-[20px]">
+                <h4 class="mb-[5px]">Contraseña</h4>
+                <input 
+                    id="passwordUser"
+                    class="w-full p-[13px] shadow-md rounded-[8px]"
+                    type="password"
+                    placeholder="***"
+                    required
+                    minlength="3"
+                    maxlength="20">
+            </label> 
+            <!-- CAMPO REPETIR CONTRASEÑA -->
+            <label class="mb-[20px]">
+                <h4 class="mb-[5px]">Repetir contraseña</h4>
+                <input 
+                    id="repetirPaswordUser"
+                    class="w-full p-[13px] shadow-md rounded-[8px]"
+                    type="password"
+                    placeholder="***"
+                    required
+                    minlength="3"
+                    maxlength="20">
+            </label> 
+        </div>
+        <!-- YA TENGO CUENTA -->
+        <a 
+            class="underline text-blue-700 mb-[20px] block"
+            href="./login.html">
+            Ya tengo una cuenta
+        </a>
+        <!-- SUBMIT -->
+        <input 
+            onclick="registerUSer()"
+            class="bg-blue-700 text-white p-[13px] rounded-[8px] w-full cursor-pointer"
+            type="button"
+            value="Registrarme">
+    </form>
+
+    <div id="userDetails"></div>
+    
+
+    <script src="./js/register.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>
