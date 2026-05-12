@@ -118,6 +118,7 @@ userForm.addEventListener("submit", (e) => {
     saveToLocalStorage();
     renderTable();
     hideModal();
+    notify(id ? "Usuario actualizado" : "Usuario agregado", "success");
 });
 
 window.deleteUser = (id) => {
@@ -125,6 +126,7 @@ window.deleteUser = (id) => {
         users = users.filter(u => u.id !== id);
         saveToLocalStorage();
         renderTable();
+        notify("Usuario eliminado", "success");
     }
 };
 

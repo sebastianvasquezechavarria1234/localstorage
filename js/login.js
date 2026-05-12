@@ -3,7 +3,7 @@ function loginUser() {
     const password = document.getElementById("passwordUser").value;
 
     if (!email || !password) {
-        alert("Por favor, ingresa correo y contraseña");
+        notify("Por favor, ingresa correo y contraseña", "error");
         return;
     }
 
@@ -13,9 +13,9 @@ function loginUser() {
 
     if (user) {
         localStorage.setItem('activeUser', JSON.stringify(user));
-        alert("Bienvenido, " + user.nombre);
+        notify("Bienvenido, " + user.nombre, "success");
         window.location.replace('./home.html');
     } else {
-        alert("Correo o contraseña incorrectos");
+        notify("Correo o contraseña incorrectos", "error");
     }
 }

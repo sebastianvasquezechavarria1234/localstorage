@@ -8,12 +8,12 @@ function registerUSer() {
     const repetirPassword = document.querySelector("#repetirPaswordUser").value;
 
     if (!nombre || !apellido || !email || !password || !repetirPassword) {
-        alert("Por favor, completa todos los campos");
+        notify("Por favor, completa todos los campos", "error");
         return;
     }
 
     if (password !== repetirPassword) {
-        alert("Las contraseñas no coinciden");
+        notify("Las contraseñas no coinciden", "error");
         return;
     }
 
@@ -21,7 +21,7 @@ function registerUSer() {
 
     const userExists = registeredUsers.find(u => u.email === email);
     if (userExists) {
-        alert("El correo electrónico ya está registrado");
+        notify("El correo electrónico ya está registrado", "error");
         return;
     }
 
@@ -36,7 +36,7 @@ function registerUSer() {
     registeredUsers.push(newUser);
     localStorage.setItem('registeredUsers', JSON.stringify(registeredUsers));
     
-    alert("Usuario registrado con éxito");
+    notify("Usuario registrado con éxito", "success");
     window.location.href = 'login.html';
 }
 
