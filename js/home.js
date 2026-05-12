@@ -2,12 +2,15 @@
 // TITLE BIENVENIDO
 const title = document.querySelector("#title")
 
-const data = JSON.parse(localStorage.getItem('user'))
-title.innerHTML = "Bienvenid@ " + `${data.nombre}` + " " + `${data.apellido}`
+const activeUser = JSON.parse(localStorage.getItem('activeUser'))
+if (activeUser) {
+    title.innerHTML = `Bienvenid@ ${activeUser.nombre} ${activeUser.apellido}`
+}
 
-function exitUser () {
-    const exit = confirm("Esta seguro de que quieres salir?")
-    if(exit){
+function exitUser() {
+    const exit = confirm("¿Estás seguro de que quieres salir?")
+    if (exit) {
+        localStorage.removeItem('activeUser')
         window.location.replace('login.html')
     }
 }
