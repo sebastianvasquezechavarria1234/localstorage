@@ -48,212 +48,63 @@
 
     </section>
 
-    <!-- MODAL FORM -->
+    <!-- MODAL USER (CREATE/UPDATE) -->
     <section
-        id="modal__form" 
-        class="fixed z-50 bg-black/20 w-full h-screen top-[-100%] flex justify-center items-center trasition-all duration-500 backdrop-blur-[10px]">
-        <!-- FORM -->
+        id="modal__user" 
+        class="fixed z-50 bg-black/20 w-full h-screen top-[-100%] flex justify-center items-center transition-all duration-500 backdrop-blur-[10px]">
         <form 
-            id="myForm"
+            id="userForm"
             class="max-w-[500px] mx-auto bg-gray-100 rounded-[20px]" 
             action="">
-            <!-- HEADER -->
             <header class="bg-blue-700 text-white p-[24px] flex justify-between items-center rounded-[20px_20px_0px_0px]">
-                <h1>Rellena el formulario</h1>
-                <span 
-                    id="btn__close"
-                    class="cursor-pointer">
-                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>
+                <h1 id="modalTitle">Rellena el formulario</h1>
+                <span class="btn__close cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>
                 </span>
             </header>
-            <!-- BODY -->
-            <div class=" p-[24px]">
-                <!-- FORM FLEX -->
-                <div class="flex gap-[10px]">
-                    <!-- CAMPO NOMBRE -->
-                    <label class="mb-[20px]">
-                        <h4 class="mb-[5px]">Nombre</h4>
-                        <input 
-                            id="nombre"
-                            class="w-full p-[13px] shadow-md rounded-[8px]"
-                            type="text"
-                            placeholder="Ejem: Sebastian"
-                            required
-                            minlength="3"
-                            maxlength="20">
-                    </label> 
-                    <!-- CAMPO APELLIDO -->
-                    <label class="mb-[20px]">
-                        <h4 class="mb-[5px]">Edad</h4>
-                        <input 
-                            id="edad"
-                            class="w-full p-[13px] shadow-md rounded-[8px]"
-                            type="number"
-                            placeholder="Ejem: 17"
-                            required>
-                    </label> 
-                </div>
-                <!-- FORM FLEX -->
-                <div class="flex gap-[10px]">
-                    <!-- CAMPO NOMBRE -->
-                    <label class="mb-[20px]">
-                        <h4 class="mb-[5px]">Ciudad</h4>
-                        <input 
-                            id="ciudad"
-                            class="w-full p-[13px] shadow-md rounded-[8px]"
-                            type="text"
-                            placeholder="Ejem: Medellin"
-                            required
-                            minlength="3"
-                            maxlength="20">
-                    </label> 
-                    <!-- CAMPO APELLIDO -->
-                    <label class="mb-[20px]">
-                        <h4 class="mb-[5px]">Correo electrónico</h4>
-                        <input 
-                            id="email"
-                            class="w-full p-[13px] shadow-md rounded-[8px]"
-                            type="email"
-                            placeholder="Ejem: Sebas@gmail.co."
-                            required
-                            minlength="3"
-                            maxlength="20">
-                    </label> 
-                </div>
-                <!-- FORM FLEX -->
-                <div class="flex gap-[10px]">
-                    <!-- CAMPO NOMBRE -->
-                    <label class="mb-[20px]">
-                        <h4 class="mb-[5px]">Teléfono</h4>
-                        <input 
-                            id="telefono"
-                            class="w-full p-[13px] shadow-md rounded-[8px]"
-                            type="number"
-                            placeholder="Ejem: 3015857417"
-                            required>
-                    </label>
-                    <!-- CAMPO APELLIDO -->
-                    <label class="mb-[20px]">
-                        <h4 class="mb-[5px]">Dirección </h4>
-                        <input 
-                            id="direccion"
-                            class="w-full p-[13px] shadow-md rounded-[8px]"
-                            type="email"
-                            placeholder="Ejem: carrera 11 56-61"
-                            required
-                            minlength="3"
-                            maxlength="20">
-                    </label> 
-                </div>
-                <!-- CAMPO DATE -->
-                <label class="mb-[20px] block">
-                    <h4 class="mb-[5px]">Fecha de inicio </h4>
-                    <input 
-                        id="dateTime"
-                        class="w-full p-[13px] shadow-md rounded-[8px]"
-                        type="date"
-                        placeholder="Ejem: Sebas@gmail.co."
-                        required
-                        minlength="3"
-                        maxlength="20">
-                </label> 
-
-                <!-- FLEX BTN BOTTOM -->
-                <div class="flex text-white gap-[10px] flex justify-end">
-                    <input 
-                        id="btn__close"
-                        class="py-[13px] px-[20px] bg-gray-700 w-[150px] rounded-[8px] text-center cursor-pointer" 
-                        type="text" 
-                        value="Cerrar">
-                    <input 
-                        class="py-[13px] px-[20px] bg-blue-700 w-[150px] rounded-[8px] text-center cursor-pointer" 
-                        type="submit" 
-                        value="Entregar">
-                </div> 
-            </div>
-        </form>
-    </section> 
-
-    <!-- MODAL VER INFORMACION -->
-    <section 
-        id="modalInfo"
-        class="fixed z-50 bg-black/20 w-full h-screen top-[-100%] flex justify-center items-center trasition-all duration-500 backdrop-blur-[10px]">
-
-    </section>
-    
-    <!-- Modal para actualizar los datos -->
-    <section id="modal__form__update" class="fixed z-50 bg-black/20 w-full h-screen top-[-100%] flex justify-center items-center transition-all duration-500 backdrop-blur-[10px]">
-        <form id="myFormUpdate" class="max-w-[500px] mx-auto bg-gray-100 rounded-[20px]" action="">
-            <!-- HEADER -->
-            <header class="bg-blue-700 text-white p-[24px] flex justify-between items-center rounded-[20px_20px_0px_0px]">
-                <h1>Rellena el formulario</h1>
-                <span id="btn__close" class="cursor-pointer">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-x">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                        <path d="M18 6l-12 12"/>
-                        <path d="M6 6l12 12"/>
-                    </svg>
-                </span>
-            </header>
-
-            <!-- BODY -->
             <div class="p-[24px]">
-                <!-- FORM FLEX -->
+                <input type="hidden" id="userId">
                 <div class="flex gap-[10px]">
-                    <!-- CAMPO NOMBRE -->
-                    <label class="mb-[20px]">
+                    <label class="mb-[20px] w-1/2">
                         <h4 class="mb-[5px]">Nombre</h4>
                         <input id="nombre" class="w-full p-[13px] shadow-md rounded-[8px]" type="text" placeholder="Ejem: Sebastian" required minlength="3" maxlength="20">
                     </label> 
-                    <!-- CAMPO EDAD -->
-                    <label class="mb-[20px]">
+                    <label class="mb-[20px] w-1/2">
                         <h4 class="mb-[5px]">Edad</h4>
                         <input id="edad" class="w-full p-[13px] shadow-md rounded-[8px]" type="number" placeholder="Ejem: 17" required>
                     </label> 
                 </div>
-                
-                <!-- FORM FLEX -->
                 <div class="flex gap-[10px]">
-                    <!-- CAMPO CIUDAD -->
-                    <label class="mb-[20px]">
+                    <label class="mb-[20px] w-1/2">
                         <h4 class="mb-[5px]">Ciudad</h4>
                         <input id="ciudad" class="w-full p-[13px] shadow-md rounded-[8px]" type="text" placeholder="Ejem: Medellin" required minlength="3" maxlength="20">
                     </label> 
-                    <!-- CAMPO EMAIL -->
-                    <label class="mb-[20px]">
+                    <label class="mb-[20px] w-1/2">
                         <h4 class="mb-[5px]">Correo electrónico</h4>
-                        <input id="email" class="w-full p-[13px] shadow-md rounded-[8px]" type="email" placeholder="Ejem: Sebas@gmail.co." required minlength="3" maxlength="20">
+                        <input id="email" class="w-full p-[13px] shadow-md rounded-[8px]" type="email" placeholder="Ejem: Sebas@gmail.com" required minlength="3">
                     </label> 
                 </div>
-                
-                <!-- FORM FLEX -->
                 <div class="flex gap-[10px]">
-                    <!-- CAMPO TELEFONO -->
-                    <label class="mb-[20px]">
+                    <label class="mb-[20px] w-1/2">
                         <h4 class="mb-[5px]">Teléfono</h4>
                         <input id="telefono" class="w-full p-[13px] shadow-md rounded-[8px]" type="number" placeholder="Ejem: 3015857417" required>
-                    </label> 
-                    <!-- CAMPO DIRECCION -->
-                    <label class="mb-[20px]">
+                    </label>
+                    <label class="mb-[20px] w-1/2">
                         <h4 class="mb-[5px]">Dirección</h4>
-                        <input id="direccion" class="w-full p-[13px] shadow-md rounded-[8px]" type="text" placeholder="Ejem: carrera 11 56-61" required minlength="3" maxlength="20">
+                        <input id="direccion" class="w-full p-[13px] shadow-md rounded-[8px]" type="text" placeholder="Ejem: carrera 11 56-61" required minlength="3">
                     </label> 
                 </div>
-
-                <!-- CAMPO DATE -->
                 <label class="mb-[20px] block">
                     <h4 class="mb-[5px]">Fecha de inicio</h4>
                     <input id="dateTime" class="w-full p-[13px] shadow-md rounded-[8px]" type="date" required>
                 </label> 
-
-                <!-- FLEX BTN BOTTOM -->
-                <div class="flex text-white gap-[10px] flex justify-end">
-                    <input id="btn__close" class="py-[13px] px-[20px] bg-gray-700 w-[150px] rounded-[8px] text-center cursor-pointer" type="button" value="Cerrar">
-                    <input class="py-[13px] px-[20px] bg-blue-700 w-[150px] rounded-[8px] text-center cursor-pointer" type="submit" value="Actualizar">
+                <div class="flex text-white gap-[10px] justify-end">
+                    <button type="button" class="btn__close py-[13px] px-[20px] bg-gray-700 w-[150px] rounded-[8px] text-center cursor-pointer">Cerrar</button>
+                    <button type="submit" id="btnSubmit" class="py-[13px] px-[20px] bg-blue-700 w-[150px] rounded-[8px] text-center cursor-pointer">Entregar</button>
                 </div> 
             </div>
         </form>
-    </section>
+    </section> 
 
     
 
