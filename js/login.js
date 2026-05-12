@@ -1,14 +1,21 @@
+function loginUser() {
+    const email = document.getElementById("emailUser").value;
+    const password = document.getElementById("passwordUser").value;
 
+    if (!email || !password) {
+        alert("Por favor, ingresa correo y contraseña");
+        return;
+    }
 
-function loginUser(){
-    let email = document.getElementById("emailUser").value
-    let password = document.getElementById("passwordUser").value
+    const registeredUsers = JSON.parse(localStorage.getItem('registeredUsers')) || [];
+    
+    const user = registeredUsers.find(u => u.email === email && u.password === password);
 
-    const data = JSON.parse(localStorage.getItem('user'))
-    if(data.email === email && data.password === password){
-        alert("Bienvenido")
-        window.location.replace('./home.html')
-    }else{
-        alert("no registrado")
+    if (user) {
+        localStorage.setItem('activeUser', JSON.stringify(user));
+        alert("Bienvenido, " + user.nombre);
+        window.location.replace('./home.html');
+    } else {
+        alert("Correo o contraseña incorrectos");
     }
 }
